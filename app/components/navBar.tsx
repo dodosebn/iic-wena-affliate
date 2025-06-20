@@ -44,7 +44,7 @@ const NavBar = () => {
                 <div className="hidden md:flex md:flex-1 md:justify-center">
                     <ul className='flex items-center gap-8'>
                         {navElem.map((item) => (
-                            <li key={item.id} className='hover:text-[#bda37a] text-sm font-semibold cursor-pointer'>{item.name}</li>
+                            <li key={item.id} className='hover:text-[#A1ACAF] text-sm font-semibold cursor-pointer'>{item.name}</li>
                         ))}
                     </ul>
                 </div>
@@ -69,8 +69,8 @@ const NavBar = () => {
                             {navElem.map((item) => (
                                 <React.Fragment key={item.id}>
                                     <li className="text-md cursor-pointer">
-                                        <a href="#" className="block py-2 hover:text-[#bda37a]
-                                        text-sm font-semibold cursor-pointer'">
+                                        <a href="#" className="block py-2 
+                                        text-[13px] hover:text-[#A1ACAF] font-semibold cursor-pointer'">
                                             {item.name}
                                         </a>
                                     </li>

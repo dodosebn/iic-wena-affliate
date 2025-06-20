@@ -9,7 +9,7 @@ const Footer = () => {
         WENA AFFLIATE
       </h1>
 
-      <p className='text-[#5d6b6b] text-sm order-2 md:order-2 text-center'>
+      <p className='text-[13px] text-[#454545] order-2 md:order-2 text-center'>
         © 2025 A THE WENA PROJECT company. All Rights Reserved.
       </p>
 

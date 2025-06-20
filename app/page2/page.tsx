@@ -6,6 +6,8 @@ import { FaAngleLeft } from 'react-icons/fa6';
 import CircleIcon from '../ultils/circle';
 import TransitionLink from '../ultils/transitionLink';
 import CategorySelect from '../ultils/filtering';
+import Footer from '../components/footer';
+import NavBar from '../components/navBar';
 
 const navElem = [
   { id: 1, name: 'CLOTHING' },
@@ -21,6 +23,8 @@ export default function Home() {
 
   return (
     <div>
+                <NavBar />
+
       <div className="p-4 max-w-[1200px] mx-auto">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <h1 className="font-bold text-2xl text-center md:text-left cursor-pointer">
@@ -37,11 +41,11 @@ export default function Home() {
         <Main />
 
       <div className="flex justify-center items-center gap-2 py-4">
-        <TransitionLink href={'/'}>
+        <TransitionLink href={'/page1'}>
           <CircleIcon content={<FaAngleLeft />} />
         </TransitionLink>
 
-        <TransitionLink href={'/'}>
+        <TransitionLink href={'/page1'}>
           <CircleIcon content={1} bgColor="bg-white" textColor="text-gray-800" />
         </TransitionLink>
 
@@ -51,6 +55,8 @@ export default function Home() {
           textColor={currentPage === 2 ? 'text-white' : 'text-gray-800'}
         />
       </div>
+                <Footer />
+
     </div>
   );
 }
