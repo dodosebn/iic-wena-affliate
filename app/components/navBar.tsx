@@ -1,9 +1,10 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 
 const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
     const navElem = [
         { id: 1, name: 'CLOTHING' },
         { id: 2, name: 'PRODUCTS' },
@@ -12,8 +13,20 @@ const NavBar = () => {
         { id: 5, name: 'SERVICES' }
     ];
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const isScrolled = window.scrollY > 10;
+            if (isScrolled !== scrolled) {
+                setScrolled(isScrolled);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [scrolled]);
+
     return (
-        <div className="relative">
+        <div className="sticky top-0 z-40 bg-white">
             <nav className="flex items-center justify-between p-6">
                 <button 
                     className="md:hidden text-2xl"
@@ -23,7 +36,9 @@ const NavBar = () => {
                 </button>
 
                 <div className={`${isMenuOpen ? 'hidden' : 'block'} md:block`}>
-                    <h1 className='font-extrabold text-2xl  text-center md:text-left cursor-pointer'>WENA AFFLIATE</h1>
+                    <h1 className={`font-extrabold text-center md:text-left cursor-pointer transition-all duration-300 ${
+                        scrolled ? 'text-lg' : 'text-2xl'
+                    }`}>WENA AFFLIATE</h1>
                 </div>
 
                 <div className="hidden md:flex md:flex-1 md:justify-center">
@@ -36,7 +51,7 @@ const NavBar = () => {
                 <div className="md:hidden w-8"></div>
             </nav>
             
-<hr className='flex w-screen'/>
+            <hr className='w-full border-gray-200' />
 
             {isMenuOpen && (
                 <div className="fixed inset-0 bg-white z-50 p-4">
