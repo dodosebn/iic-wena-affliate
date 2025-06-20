@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { FaArrowRightLong } from "react-icons/fa6";
 
 import AFFLIATE_ITEMS from './data/affliateItems';
+import TransitionLink from '../ultils/transitionLink';
 
 const Main = () => {
   return (
@@ -22,14 +23,16 @@ const Main = () => {
           </div>
           <div className="flex flex-col flex-grow">
             <div>
-              <h1 className="text-xl font-bold mt-2">{item.title}</h1>
+              <TransitionLink href={item.path}><h1 className="text-xl font-bold mt-2">{item.title}</h1></TransitionLink>
               <p className="mt-2 px-2 whitespace-normal leading-relaxed text-sm text-[#5d6b6b]">
                 {item.decrib}
               </p>
             </div>
+               <TransitionLink href={item.path}>
             <button className="bg-[#333333] text-white px-6 py-1 font-bold hover:bg-[#fff] hover:text-[#333] border hover:border-[#333] whitespace-nowrap transition-transform duration-300 ease-in-out hover:shadow-[3px_3px_0px_0px_#000] hover:-translate-y-0.9 mt-4 self-start">
               SHOP NOW <FaArrowRightLong className="inline ml-1" />
             </button>
+            </TransitionLink>
           </div>
         </div>
       ))}
