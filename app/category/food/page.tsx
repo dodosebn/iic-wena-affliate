@@ -3,61 +3,46 @@
 import Main from '@/app/components/main';
 import { FaAngleRight } from 'react-icons/fa6';
 
-import { useState } from 'react';
 import NavBar from '@/app/components/navBar';
-import CategorySelect from '@/app/ultils/filtering';
 import CircleIcon from '@/app/ultils/circle';
 import TransitionLink from '@/app/ultils/transitionLink';
 import Footer from '@/app/components/footer';
 
 
 
-const navElem = [
-  { id: 1, name: 'CLOTHING' },
-  { id: 2, name: 'PRODUCTS' },
-  { id: 3, name: 'FOODS' },
-  { id: 4, name: 'TRAVEL' },
-  { id: 5, name: 'SERVICES' },
-];
+
 
 export default function Home() {
-  const [selectedCategory, setSelectedCategory] = useState('TRAVEL');
   const currentPage = 1;
 
   return (
     <div>
                         <NavBar />
 
-     <div className="p-4  max-w-[1200px] mx-auto">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <h1 className="font-bold text-2xl text-center md:text-left cursor-pointer">
-            {selectedCategory}
+     <div className="px-8 py-5 mx-auto">
+          <h1 className="font-bold text-[24px] text-center md:text-left cursor-pointer">
+            FOODS
           </h1>
 
-          <CategorySelect
-            navElem={navElem}
-            selected={selectedCategory}
-            onChange={setSelectedCategory}
-          />
-        </div>
+     
         </div>
               <Main />
 
 
-      <div className="flex justify-center items-center gap-2 py-4">
+<div className="flex justify-center items-center gap-2 py-4">
         <CircleIcon
           content={1}
           bgColor={currentPage === 1 ? 'bg-black' : 'bg-white'}
           textColor={currentPage === 1 ? 'text-white' : 'text-gray-800'}
         />
-        <TransitionLink href='/page2'>
+        <TransitionLink href='/category/food/page/2'>
         <CircleIcon
           content={2}
           bgColor={'bg-white'}
           textColor={'text-gray-800'}
         />
         </TransitionLink>
-                <TransitionLink href='/page2'>
+                <TransitionLink href='/category/food/page/2'>
 
         <CircleIcon content={<FaAngleRight />} />
                 </TransitionLink>

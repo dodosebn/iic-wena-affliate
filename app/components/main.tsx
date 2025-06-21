@@ -8,10 +8,10 @@ import TransitionLink from '../ultils/transitionLink';
 const Main = () => {
   return (
     <main className="grid grid-cols-1 md:grid-cols-3">
-      {AFFLIATE_ITEMS.map((item) => (
+      {AFFLIATE_ITEMS.slice(0, 9).map((item) => (
         <div
           key={item.id}
-          className="border border-[#d3d3d3] flex flex-col h-full"
+          className="border border-[#eaeaea] flex flex-col h-full"
         >
 <div className="relative w-full lg:aspect-[5.5/3] aspect-5/3">
             <Image

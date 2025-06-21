@@ -16,14 +16,19 @@ const CircleIcon = ({
 }: CircleIconProps) => {
   const finalBg = active ? 'bg-black' : bgColor;
   const finalText = active ? 'text-white' : textColor;
+  const hoverEffect = active ? '' : 'hover:bg-[#dcb28a] hover:border-none hover:text-[#fff] transition-all ease-in-out duration-300';
 
   return (
+    <div className="mt-6">
     <div
       className={`rounded-full ${finalBg} ${finalText} 
-      flex items-center  justify-center w-12 h-12 border border-[#333] ${className}`}
+      flex items-center justify-center w-14 h-14 border border-[#333] 
+      ${hoverEffect} ${className}`}
     >
       <span className="flex text-sm">{content}</span>
     </div>
+    </div>
   );
 };
+
 export default CircleIcon;

@@ -54,7 +54,7 @@ const Page = () => {
             </div>
           </div>
           <div className='py-4 flex justify-start'>
-            <TransitionLink href='/page1'>
+            <TransitionLink href='/category/clothing'>
             <button className='text-[13px] text-[#fff] bg-[rgb(7,7,7)]
                            hover:bg-[#f9f9f9]/90 hover:text-[#070707] py-4 px-14 font-semibold'>
               ENTER
