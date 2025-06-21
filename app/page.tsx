@@ -23,8 +23,8 @@ const Page = () => {
       
       <section className="fixed top-0 left-0 bottom-0 w-full h-full flex justify-center px-5 pt-10
                           md:justify-end md:pr-10 md:pt-10 overflow-y-auto">
-        <div className="w-full max-w-[30rem] flex flex-col mb-auto mt-10">
-          <div className='p-7 bg-[#f9f9f9]'>
+        <div className="w-full max-w-[30rem] flex flex-col mb-auto mt-8">
+          <div className='p-8 bg-[#f9f9f9]'>
             <div>
               <h1 className='font-bold text-[52px] lg:tracking-[0.8em] tracking-[0.4em]'>BREEZY</h1>
             </div>

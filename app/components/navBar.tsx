@@ -36,10 +36,11 @@ const NavBar = () => {
                 </button>
 
                 <div className={`${isMenuOpen ? 'hidden' : 'block'} md:block`}>
-                    <h1 className={`font-extrabold text-center md:text-left cursor-pointer transition-all duration-300 ${
-                        scrolled ? 'text-lg' : 'text-2xl'
-                    }`}>WENA AFFLIATE</h1>
-                </div>
+    <h1 className={`font-extrabold text-center md:text-left cursor-pointer
+     transition-all ease-in-out duration-300 ${
+        scrolled ? 'text-lg' : 'text-2xl'
+     }`}>WENA AFFLIATE</h1>
+</div>
 
                 <div className="hidden md:flex md:flex-1 md:justify-center">
                     <ul className='flex items-center gap-8'>
@@ -70,7 +71,7 @@ const NavBar = () => {
                                 <React.Fragment key={item.id}>
                                     <li className="text-md cursor-pointer">
                                         <a href="#" className="block py-2 
-                                        text-[13px] hover:text-[#A1ACAF] font-semibold cursor-pointer'">
+                                        text-[13px] hover:text-[#A1ACAF] font-semibold cursor-pointer">
                                             {item.name}
                                         </a>
                                     </li>
