@@ -66,7 +66,7 @@ const NavBar = () => {
                 </div>
 
                 <div className="hidden md:flex flex-1 justify-center">
-                    <ul className="flex items-center gap-8">
+                    <ul className="flex items-center gap-14">
                         {navElem.map((item) => (
                             <div key={item.id}>
                                 <TransitionLink href={item.path}>
@@ -88,11 +88,16 @@ const NavBar = () => {
                 <div className="hidden md:block flex-1" />
             </nav>
 
-            <hr className={`
-                w-full border-[0.5] border-[#454545]
-                transition-all duration-700 ease-out
-                ${scrolled ? "transform -translate-y-2" : ""}
-            `} />
+<hr
+  className={`
+    w-full h-[0.055px] bg-[#454545]  
+    border-none
+    transition-all duration-700 ease-out
+    ${scrolled ? "transform -translate-y-2" : ""}
+  `}
+/>
+
+
 
             {isMenuOpen && (
                 <div className="fixed inset-0 bg-white z-50 p-4">
