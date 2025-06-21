@@ -1,12 +1,13 @@
 import React from 'react'
 import { FaSquareInstagram, FaXTwitter, FaTiktok } from "react-icons/fa6";
-
+import Image from 'next/image';
+import Logo from '@/public/images/affiliate-title.jpg';
 const Footer = () => {
   return (
     <footer className="flex flex-col md:flex-row items-center justify-between gap-7 p-6 border-t
      border-gray-200">
-      <h1 className='font-extrabold text-2xl cursor-pointer order-3 md:order-1'>
-        WENA AFFLIATE
+      <h1 className='cursor-pointer order-3 md:order-1'>
+        <Image src={Logo} alt='ohmss' className='scale-75' />
       </h1>
 
       <p className='text-[13px] text-[#454545] order-2 md:order-2 text-center'>
