@@ -24,7 +24,7 @@ const Page = () => {
       <section className="fixed top-0 left-0 bottom-0 w-full h-full flex justify-center px-5 pt-10
                           md:justify-end md:pr-10 md:pt-10 overflow-y-auto">
         <div className="w-full max-w-[30rem] flex flex-col mb-auto mt-8">
-          <div className='p-8 bg-[#f9f9f9]'>
+          <div className='p-8 bg-[#f9f9f9]/90'>
             <div>
               <h1 className='font-bold text-[52px] lg:tracking-[0.8em] tracking-[0.4em]'>BREEZY</h1>
             </div>
@@ -56,7 +56,7 @@ const Page = () => {
           <div className='py-4 flex justify-start'>
             <TransitionLink href='/page1'>
             <button className='text-[13px] text-[#fff] bg-[rgb(7,7,7)]
-                           hover:bg-[#fff] hover:text-[#070707] py-4 px-14 font-semibold'>
+                           hover:bg-[#f9f9f9]/90 hover:text-[#070707] py-4 px-14 font-semibold'>
               ENTER
             </button>
             </TransitionLink>
