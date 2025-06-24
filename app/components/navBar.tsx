@@ -93,7 +93,6 @@ const NavBar = () => {
     w-full h-[0.055px] bg-[#454545]  
     border-none
     transition-all duration-700 ease-out
-    ${scrolled ? "transform -translate-y-2" : ""}
   `}
 />
 
