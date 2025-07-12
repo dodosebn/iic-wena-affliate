@@ -60,7 +60,7 @@ const NavBar = () => {
       <nav className="flex items-center justify-between py-4 px-6">
         {/* Mobile Menu Button & Logo */}
         <div className="flex md:hidden items-center mx-auto gap-2">
-          <Image src={Logo} alt="Logo" className="scale-75" />
+          <Link href={'/'}><Image src={Logo} alt="Logo" className="scale-75" /> </Link>
            <button onClick={() => setIsMenuOpen(true)} 
              className="text-3xl text-gray-700 cursor-pointer rotate-90
                    block md:absolute md:right-5 md:top-1/2 md:-translate-y-1/2">
