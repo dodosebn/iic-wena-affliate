@@ -12,7 +12,7 @@ import Footer from '@/app/components/footer';
 
 
 
-export default function Home() {
+export default function Food() {
   const currentPage = 1;
 
   return (

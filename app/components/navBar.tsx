@@ -103,7 +103,8 @@ const NavBar = () => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            className="fixed inset-0 bg-white flex items-center justify-center z-50 p-4"
+            className="fixed inset-0 bg-white
+             flex items-center justify-center z-50 p-4"
             initial={{ y: '100%' }}
             animate={{ y: 0 }}
             exit={{ y: '100%' }}
